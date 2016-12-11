@@ -1,5 +1,5 @@
 import time
-import wiringpi
+import wiringpi2
 
 # the value of the 'other' resistor
 SERIESRESISTOR=560
@@ -9,8 +9,8 @@ SENSORPIN=22
  
 def main():
     for pin in range(50):
-        wiringpi.wiringPiSetupGpio()
-        wiringpi.pinMode(pin, 0)
+        wiringpi2.wiringPiSetupGpio()
+        wiringpi2.pinMode(pin, 0)
         reading = wiringpi.analogRead(pin)
        
         print("Analog reading ")
